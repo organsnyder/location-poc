@@ -7,7 +7,7 @@
   "instances": 1,
   "container": {
     "docker": {
-      "image": "samdelamarter/locationpoc:0.0.1",
+      "image": "samdelamarter/locationpoc:0.0.2",
       "network": "BRIDGE",
       "parameters": [],
       "portMappings": [
