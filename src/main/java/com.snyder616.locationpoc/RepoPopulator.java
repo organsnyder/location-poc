@@ -14,7 +14,12 @@ public class RepoPopulator implements ApplicationListener<ApplicationReadyEvent>
 
   @Override
   public void onApplicationEvent(ApplicationReadyEvent event) {
-    repo.add(new Location(1, "Worden Cafe", "25 Ottawa Ave SW", null, "Grand Rapids", "MI", "49503"));
-    repo.add(new Location(2, "25 Eattawa", "Nowhere", null, "Hell", "MI", "48169"));
+    repo.add(create(1, "Worden Cafe", "25 Ottawa Ave SW", null, "Grand Rapids", "MI", "49503"));
+    repo.add(create(2, "25 Eattawa", "Nowhere", null, "Hell", "MI", "48169"));
+  }
+
+  private Location create(long id, String name, String address1, String address2, String city, String state, String zip) {
+    Location.Builder b = new Location.Builder();
+    return b.id(id).name(name).address1(address1).address2(address2).city(city).state(state).zip(zip).build();
   }
 }

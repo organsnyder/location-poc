@@ -1,0 +1,13 @@
+package com.snyder616.locationpoc.model;
+
+option java_outer_classname = "LocationProtos";
+
+message Location {
+  required int64 id = 1;
+  required string name = 2;
+  required string address1 = 3;
+  optional string address2 = 4;
+  required string city = 5;
+  required string state = 6;
+  required string zip = 7;
+}

@@ -17,7 +17,7 @@ public class LocationRepository {
   }
 
   public void add(Location location) {
-    idsToLocations.put(location.getId(), location);
+    idsToLocations.put(location.id, location);
   }
 
   public List<Location> getLocations() {
